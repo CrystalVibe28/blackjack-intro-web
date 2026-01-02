@@ -192,6 +192,91 @@ git push -u origin main
 - 優化：壓縮後再使用，建議使用 TinyPNG 或類似工具
 - 尺寸：根據使用位置準備適當尺寸，避免過大
 
+### Bootstrap 5 響應式斷點
+
+Bootstrap 5 採用 **mobile-first** 設計理念，以下是三個最常見的響應式斷點：
+
+#### 1. **手機裝置 (Extra Small & Small)**
+- **斷點範圍**: `< 768px`
+- **適用裝置**: 手機（直向與橫向）
+- **Bootstrap 前綴**: 
+  - `xs` (< 576px) - 無需前綴，這是預設值
+  - `sm` (≥ 576px) - 使用 `-sm-` 前綴
+
+**使用範例**:
+```html
+<!-- 在手機上佔滿全寬（12欄），sm 以上佔 6 欄 -->
+<div class="col-12 col-sm-6">內容區塊</div>
+
+<!-- 在 xs 時隱藏，sm 以上顯示 -->
+<div class="d-none d-sm-block">在手機上隱藏</div>
+```
+
+#### 2. **平板裝置 (Medium)**
+- **斷點範圍**: `768px - 991px`
+- **適用裝置**: 平板電腦（iPad、Android 平板等）
+- **Bootstrap 前綴**: `-md-`
+
+**使用範例**:
+```html
+<!-- 手機全寬、平板佔 6 欄、桌面佔 4 欄 -->
+<div class="col-12 col-md-6 col-lg-4">響應式卡片</div>
+
+<!-- 在 md 以上置中對齊 -->
+<div class="text-start text-md-center">文字內容</div>
+
+<!-- 平板以上改變排列方向 -->
+<div class="flex-column flex-md-row d-flex">
+  <div>項目1</div>
+  <div>項目2</div>
+</div>
+```
+
+#### 3. **桌面裝置 (Large & Extra Large)**
+- **斷點範圍**: `≥ 992px`
+- **適用裝置**: 桌上型電腦、筆記型電腦
+- **Bootstrap 前綴**: 
+  - `lg` (≥ 992px) - 使用 `-lg-` 前綴
+  - `xl` (≥ 1200px) - 使用 `-xl-` 前綴
+  - `xxl` (≥ 1400px) - 使用 `-xxl-` 前綴
+
+**使用範例**:
+```html
+<!-- 桌面顯示 4 欄佈局 -->
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-3">卡片 1</div>
+  <div class="col-12 col-md-6 col-lg-3">卡片 2</div>
+  <div class="col-12 col-md-6 col-lg-3">卡片 3</div>
+  <div class="col-12 col-md-6 col-lg-3">卡片 4</div>
+</div>
+
+<!-- 只在桌面顯示側邊欄 -->
+<div class="d-none d-lg-block">側邊導航</div>
+```
+
+#### Bootstrap 5 斷點完整對照表
+
+| 斷點名稱 | Class 前綴 | 最小寬度 | 常見裝置 | 容器最大寬度 |
+|---------|-----------|---------|---------|------------|
+| Extra small | (無) | < 576px | 手機（直向） | 100% |
+| Small | `sm` | ≥ 576px | 手機（橫向） | 540px |
+| Medium | `md` | ≥ 768px | 平板 | 720px |
+| Large | `lg` | ≥ 992px | 桌面 | 960px |
+| Extra large | `xl` | ≥ 1200px | 大桌面 | 1140px |
+| Extra extra large | `xxl` | ≥ 1400px | 超大桌面 | 1320px |
+
+#### 實用技巧
+
+1. **優先使用三個主要斷點**（xs/sm、md、lg）可滿足大部分需求
+2. **採用 mobile-first 思維**：先設計手機版，再逐步優化大螢幕
+3. **常用響應式 utility classes**：
+   - 顯示/隱藏：`d-{breakpoint}-{value}` (如 `d-none`, `d-md-block`)
+   - 文字對齊：`text-{breakpoint}-{alignment}` (如 `text-center`, `text-lg-start`)
+   - Flexbox：`flex-{breakpoint}-{direction}` (如 `flex-row`, `flex-md-column`)
+   - 間距：`m{side}-{breakpoint}-{size}` (如 `mb-3`, `mt-md-5`)
+
+4. **測試建議**：使用瀏覽器開發者工具的 Responsive Design Mode 測試各斷點顯示效果
+
 ---
 
 ## SEO 最佳實踐
