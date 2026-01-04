@@ -533,6 +533,10 @@ docs: 更新 AGENTS.md 開發指南
 
 ## 更新記錄
 
+### 2026-01-05
+- ✅ 移除所有頁面的 Newsletter 訂閱區塊
+  - 清理了 index.html, about.html, service.html, feature.html, appoinment.html, team.html, testimonial.html, contact.html, 404.html 共 9 個頁面
+
 ### 2026-01-03
 - ✅ 建立 AGENTS.md 文件
 - ✅ 定義專案目標與技術棧
