@@ -270,10 +270,10 @@ h6 {
     align-items: start;
     justify-content: center;
     text-align: left;
-    background: rgba(0, 0, 0, .85);
-    /* Darker overlay */
-    padding: 3rem;
-    padding-left: 11rem;
+    background: rgba(0, 0, 0, .6);
+    /* Slightly lighter overlay to show images better */
+    padding: 2rem;
+    padding-left: 8rem;
     z-index: 1;
 }
 
@@ -284,7 +284,7 @@ h6 {
 @media (max-width: 992px) {
     .carousel .carousel-item {
         position: relative;
-        min-height: 600px;
+        min-height: 500px;
     }
 
     .carousel .carousel-item img {
@@ -295,23 +295,46 @@ h6 {
     }
 
     .carousel .carousel-caption {
-        padding-left: 10rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .carousel .carousel-caption h1 {
+        font-size: 3rem !important;
     }
 }
 
 @media (max-width: 768px) {
     .carousel .carousel-item {
-        min-height: 500px;
+        min-height: 400px;
     }
 
     .carousel .carousel-caption {
-        padding-left: 9rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .carousel .carousel-caption h1 {
+        font-size: 2rem !important;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 993px) {
+    .carousel .carousel-item {
+        position: relative;
+        min-height: 650px;
+        max-height: 650px;
+    }
+
+    .carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     .carousel .carousel-item .display-1 {
-        font-size: 7rem;
+        font-size: 4.5rem;
     }
 }
 
