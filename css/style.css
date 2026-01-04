@@ -508,6 +508,8 @@ h6 {
     box-shadow: 0 0 45px rgba(0, 0, 0, .2);
 }
 
+/* Hover effects removed - no social media overlay on hover */
+/*
 .team .team-item .team-social {
     position: absolute;
     width: 0;
@@ -534,6 +536,7 @@ h6 {
 .team .team-item:hover .team-social .btn {
     opacity: 1;
 }
+*/
 
 
 /*** Testimonial ***/
