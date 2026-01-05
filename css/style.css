@@ -182,21 +182,23 @@ h6 {
     transition: .5s;
 }
 
-/* Force Navbar Dark Theme */
+/* Navbar Dark Theme with transparency */
 .navbar {
-    background-color: #000 !important;
+    background-color: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(10px);
 }
 
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
     padding: 25px 0;
     color: #e0e0e0;
-    /* Light text */
+    /* Dark text for light navbar */
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
     outline: none;
 }
+
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
